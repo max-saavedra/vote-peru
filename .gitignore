@@ -1,0 +1,40 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+.venv/
+venv/
+*.egg-info/
+dist/
+build/
+
+# Database files - never commit the database
+*.db
+*.sqlite
+*.sqlite3
+
+# Environment files - never commit secrets
+.env
+.env.local
+.env.production
+.env.*.local
+
+# Node / Frontend
+node_modules/
+frontend/dist/
+frontend/.vercel/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp

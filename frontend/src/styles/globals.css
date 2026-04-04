@@ -1,0 +1,179 @@
+/* Global CSS: design tokens, resets, and base typography */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Inter:wght@400;500&display=swap');
+
+/* ---- Design tokens ---- */
+:root {
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Light theme */
+  --bg: #f8f7f4;
+  --bg-card: #ffffff;
+  --bg-hover: #f0efeb;
+  --border: #e2e0da;
+  --text: #1a1814;
+  --text-muted: #6b6860;
+  --accent: #c8102e;        /* Peru flag red */
+  --accent-2: #d4af37;      /* Gold */
+  --accent-light: #fde8ec;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --radius: 12px;
+  --radius-lg: 20px;
+  --transition: 0.2s ease;
+}
+
+[data-theme="dark"] {
+  --bg: #111010;
+  --bg-card: #1c1b1a;
+  --bg-hover: #252422;
+  --border: #2e2c2a;
+  --text: #f0ede8;
+  --text-muted: #9a9591;
+  --accent: #e8294d;
+  --accent-2: #d4af37;
+  --accent-light: #2d1219;
+  --shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.6);
+}
+
+/* ---- Reset ---- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background var(--transition), color var(--transition);
+  min-height: 100vh;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4 {
+  font-family: var(--font-heading);
+  line-height: 1.2;
+  color: var(--text);
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---- Layout helpers ---- */
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---- Card base ---- */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow);
+}
+
+/* ---- Button base ---- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-heading);
+  font-weight: 600;
+  font-size: 0.95rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+}
+
+.btn-primary:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+.btn-secondary {
+  background: var(--bg-hover);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+  background: var(--border);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ---- Form inputs ---- */
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  background: var(--bg);
+  color: var(--text);
+  border: 1.5px solid var(--border);
+  border-radius: 10px;
+  transition: border-color var(--transition), box-shadow var(--transition);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+
+/* ---- Animations ---- */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.5; }
+}
+
+.fade-in {
+  animation: fadeIn 0.4s ease forwards;
+}

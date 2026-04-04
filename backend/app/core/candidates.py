@@ -1,0 +1,305 @@
+"""
+Static registry of all presidential candidates for the 2026 Peruvian election.
+This is the single source of truth for candidate data on both backend and frontend.
+"""
+
+from typing import TypedDict
+
+
+class Candidate(TypedDict):
+    id: str
+    name: str
+    party: str
+    party_logo: str
+    photo: str
+    color: str  # for charts
+
+
+CANDIDATES: list[Candidate] = [
+    {
+        "id": "lopez-chau",
+        "name": "Alfonso López-Chau",
+        "party": "Ahora Nación",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_Ahora_Naci%C3%B3n_2026.jpg/60px-Logo_Ahora_Naci%C3%B3n_2026.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Alfonso_L%C3%B3pez-Chau.jpg/120px-Alfonso_L%C3%B3pez-Chau.jpg",
+        "color": "#1a6b3a",
+    },
+    {
+        "id": "acuna",
+        "name": "César Acuña",
+        "party": "Alianza para el Progreso",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Alianza_para_el_Progreso_Peru.svg/60px-Alianza_para_el_Progreso_Peru.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/C%C3%89SAR_ACU%C3%91A_PERALTA-WIKIPEDIA-PERFIL.jpg/120px-C%C3%89SAR_ACU%C3%91A_PERALTA-WIKIPEDIA-PERFIL.jpg",
+        "color": "#2563eb",
+    },
+    {
+        "id": "williams",
+        "name": "José Williams",
+        "party": "Avanza País",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Go_on_Country_2022.jpg/60px-Go_on_Country_2022.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Jos%C3%A9_Williams%2C_octubre_de_2022_1_%28cropped%29.jpg/120px-Jos%C3%A9_Williams%2C_octubre_de_2022_1_%28cropped%29.jpg",
+        "color": "#dc2626",
+    },
+    {
+        "id": "lescano",
+        "name": "Yonhy Lescano",
+        "party": "Cooperación Popular",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Logo_Cooperacion_Popular_Peru.png/60px-Logo_Cooperacion_Popular_Peru.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1f/Yonhy_Lescano_2012_%28cropped%29.jpg/120px-Yonhy_Lescano_2012_%28cropped%29.jpg",
+        "color": "#7c3aed",
+    },
+    {
+        "id": "paz-de-la-barra",
+        "name": "Álvaro Paz de la Barra",
+        "party": "Fe en el Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ac/Fe_en_el_Per%C3%BA_%28logo%29.svg/60px-Fe_en_el_Per%C3%BA_%28logo%29.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/%C3%81lvaro_Paz_de_la_Barra.jpg/120px-%C3%81lvaro_Paz_de_la_Barra.jpg",
+        "color": "#059669",
+    },
+    {
+        "id": "olivera",
+        "name": "Fernando Olivera",
+        "party": "Frente de la Esperanza",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Frente_de_la_Esperanza_2021_%28logo%29.svg/60px-Frente_de_la_Esperanza_2021_%28logo%29.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Fernando_Olivera_2025.png/120px-Fernando_Olivera_2025.png",
+        "color": "#d97706",
+    },
+    {
+        "id": "fujimori",
+        "name": "Keiko Fujimori",
+        "party": "Fuerza Popular",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Logo_of_the_Popular_Force_%282024%29.svg/60px-Logo_of_the_Popular_Force_%282024%29.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Keiko_Fujimori_2.jpg/120px-Keiko_Fujimori_2.jpg",
+        "color": "#f97316",
+    },
+    {
+        "id": "molinelli",
+        "name": "Fiorella Molinelli",
+        "party": "Fuerza y Libertad",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Logo_de_Batalla_Per%C3%BA.jpg/60px-Logo_de_Batalla_Per%C3%BA.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a0/Fiorella_Mollinelli.jpg/120px-Fiorella_Mollinelli.jpg",
+        "color": "#ec4899",
+    },
+    {
+        "id": "grozo",
+        "name": "Wolfgang Grozo",
+        "party": "Integridad Democrática",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Logo_de_Integridad_democratica.jpg/60px-Logo_de_Integridad_democratica.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Wolfgang_Grozo_Costa.png/120px-Wolfgang_Grozo_Costa.png",
+        "color": "#0891b2",
+    },
+    {
+        "id": "sanchez",
+        "name": "Roberto Sánchez",
+        "party": "Juntos por el Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Logo_juntos_por_el_Peru.svg/60px-Logo_juntos_por_el_Peru.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Roberto_Sanchez_Palomino_%28cropped%29.jpg/120px-Roberto_Sanchez_Palomino_%28cropped%29.jpg",
+        "color": "#65a30d",
+    },
+    {
+        "id": "belaunde-llosa",
+        "name": "Rafael Belaúnde Llosa",
+        "party": "Libertad Popular",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Logo_de_Libertad_Popular.jpg/60px-Logo_de_Libertad_Popular.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Rafael_Bela%C3%BAnde_Llosa.jpg/120px-Rafael_Bela%C3%BAnde_Llosa.jpg",
+        "color": "#6366f1",
+    },
+    {
+        "id": "alvarez-carlos",
+        "name": "Carlos Álvarez",
+        "party": "País para Todos",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Logo_de_Pais_para_todos.jpg/60px-Logo_de_Pais_para_todos.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Carlos_%C3%81lvarez_2025_%28cropped%29.jpg/120px-Carlos_%C3%81lvarez_2025_%28cropped%29.jpg",
+        "color": "#84cc16",
+    },
+    {
+        "id": "valderrama",
+        "name": "Enrique Valderrama",
+        "party": "Partido Aprista Peruano",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/APRA_Peru_logo.svg/60px-APRA_Peru_logo.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/EnriqueValderramaPAP.jpg/120px-EnriqueValderramaPAP.jpg",
+        "color": "#b91c1c",
+    },
+    {
+        "id": "belmont",
+        "name": "Ricardo Belmont",
+        "party": "Partido Cívico OBRAS",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Partido_Civico_OBRAS.png/60px-Partido_Civico_OBRAS.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Ricardo_Belmont_3.jpg/120px-Ricardo_Belmont_3.jpg",
+        "color": "#92400e",
+    },
+    {
+        "id": "nieto",
+        "name": "Jorge Nieto",
+        "party": "Partido del Buen Gobierno",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/PBG_Logo.jpg/60px-PBG_Logo.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b5/JORGE_NIETO_%28CROPPED%29.jpg/120px-JORGE_NIETO_%28CROPPED%29.jpg",
+        "color": "#1d4ed8",
+    },
+    {
+        "id": "carrasco",
+        "name": "Charlie Carrasco",
+        "party": "Partido Demócrata Unido Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f5/Logo_de_partido_democratico_unido_peru.jpg/60px-Logo_de_partido_democratico_unido_peru.jpg",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/12fa17db-f28f-4330-9123-88549539b538.jpg",
+        "color": "#0f766e",
+    },
+    {
+        "id": "gonzales",
+        "name": "Álex Gonzales",
+        "party": "Partido Demócrata Verde",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/64/Dem%C3%B3crata_Verde_%28logo%29.svg/60px-Dem%C3%B3crata_Verde_%28logo%29.svg.png",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/c0ae56bf-21c1-4810-890a-b25c8465bdd9.jpg",
+        "color": "#15803d",
+    },
+    {
+        "id": "masse",
+        "name": "Armando Massé",
+        "party": "Partido Democrático Federal",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Logo_de_Democratico_federal.jpg/60px-Logo_de_Democratico_federal.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3c/Armando_Mass%C3%A9.png/120px-Armando_Mass%C3%A9.png",
+        "color": "#9333ea",
+    },
+    {
+        "id": "guevara",
+        "name": "Mesías Guevara",
+        "party": "Partido Morado",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c7/Partido_Morado_logo.svg/60px-Partido_Morado_logo.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Mes%C3%ADas_Guevara_%282011%29_4x3.jpg/120px-Mes%C3%ADas_Guevara_%282011%29_4x3.jpg",
+        "color": "#7e22ce",
+    },
+    {
+        "id": "caller",
+        "name": "Herbert Caller",
+        "party": "Partido Patriótico del Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Partido_Patri%C3%B3tico_del_Per%C3%BA_%28logo%29.svg/60px-Partido_Patri%C3%B3tico_del_Per%C3%BA_%28logo%29.svg.png",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/6ad6c5ff-0411-4ddd-9cf7-b0623f373fcf.jpg",
+        "color": "#b45309",
+    },
+    {
+        "id": "chirinos",
+        "name": "Walter Chirinos",
+        "party": "Partido PRIN",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cd/Partido_Pol%C3%ADtico_PRIN_-_S%C3%ADmbolo.png/60px-Partido_Pol%C3%ADtico_PRIN_-_S%C3%ADmbolo.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Walter_Chirinos_%28cropped%29.png/120px-Walter_Chirinos_%28cropped%29.png",
+        "color": "#0369a1",
+    },
+    {
+        "id": "espa",
+        "name": "Carlos Espá",
+        "party": "Partido SíCreo",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Logo_Partido_Pol%C3%ADtico_S%C3%ADCreo.png/60px-Logo_Partido_Pol%C3%ADtico_S%C3%ADCreo.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Carlos_Espa_Garces_Alvear_2026.png/250px-Carlos_Espa_Garces_Alvear_2026.png",
+        "color": "#be185d",
+    },
+    {
+        "id": "diez-canseco",
+        "name": "Francisco Diez-Canseco",
+        "party": "Perú Acción",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/Per%C3%BA_Naci%C3%B3n_2022.jpg/60px-Per%C3%BA_Naci%C3%B3n_2022.jpg",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/2d1bf7f2-6e88-4ea9-8ed2-975c1ae5fb92.jpg",
+        "color": "#16a34a",
+    },
+    {
+        "id": "cerron",
+        "name": "Vladimir Cerrón",
+        "party": "Perú Libre",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/Per%C3%BA_Libre_logo.svg/60px-Per%C3%BA_Libre_logo.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Vladimir_Cerr%C3%B3n_%28cropped%29.JPG/120px-Vladimir_Cerr%C3%B3n_%28cropped%29.JPG",
+        "color": "#dc2626",
+    },
+    {
+        "id": "vizcarra",
+        "name": "Mario Vizcarra",
+        "party": "Perú Primero",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Logo_de_Per%C3%BA_Primero.png/60px-Logo_de_Per%C3%BA_Primero.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/de/Mario_Vizcarra_%28cropped%29.jpg/120px-Mario_Vizcarra_%28cropped%29.jpg",
+        "color": "#ca8a04",
+    },
+    {
+        "id": "jaico",
+        "name": "Carlos Jaico",
+        "party": "Perú Moderno",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7f/Logo_de_Per%C3%BA_moderno.jpg/60px-Logo_de_Per%C3%BA_moderno.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Carlos_Jaico_Carranza.png/120px-Carlos_Jaico_Carranza.png",
+        "color": "#0e7490",
+    },
+    {
+        "id": "luna",
+        "name": "José Luna Gálvez",
+        "party": "Podemos Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/07/Logo_Podemos_Per%C3%BA.png/60px-Logo_Podemos_Per%C3%BA.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/Jos%C3%A9_Luna_1.jpg/120px-Jos%C3%A9_Luna_1.jpg",
+        "color": "#4338ca",
+    },
+    {
+        "id": "perez-tello",
+        "name": "Marisol Pérez Tello",
+        "party": "Primero la Gente",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Primero_La_Gente_2022.jpg/60px-Primero_La_Gente_2022.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/MarisolP%C3%A9rezTello.jpg/120px-MarisolP%C3%A9rezTello.jpg",
+        "color": "#db2777",
+    },
+    {
+        "id": "jaimes",
+        "name": "Paul Jaimes",
+        "party": "Progresemos",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Logo_de_Progresemos.jpg/60px-Logo_de_Progresemos.jpg",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/929e1a63-335d-4f3a-ba26-f3c7ff136213.jpg",
+        "color": "#0284c7",
+    },
+    {
+        "id": "lopez-aliaga",
+        "name": "Rafael López Aliaga",
+        "party": "Renovación Popular",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/Logo_Renovaci%C3%B3n_Popular_2023.png/60px-Logo_Renovaci%C3%B3n_Popular_2023.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c4/Rafael_L%C3%B3pez_Aliaga_2024_%28cropped%29.jpg/120px-Rafael_L%C3%B3pez_Aliaga_2024_%28cropped%29.jpg",
+        "color": "#991b1b",
+    },
+    {
+        "id": "ortiz",
+        "name": "Antonio Ortiz",
+        "party": "Salvemos al Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Salvemos_al_Peru.png/60px-Salvemos_al_Peru.png",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/8e6b9124-2883-4143-8768-105f2ce780eb.jpg",
+        "color": "#166534",
+    },
+    {
+        "id": "forsyth",
+        "name": "George Forsyth",
+        "party": "Somos Perú",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c9/Logo_Partido_Democr%C3%A1tico_Somos_Per%C3%BA.svg/60px-Logo_Partido_Democr%C3%A1tico_Somos_Per%C3%BA.svg.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/George_Forsyth_Sommer.jpg/120px-George_Forsyth_Sommer.jpg",
+        "color": "#1e40af",
+    },
+    {
+        "id": "fernandez",
+        "name": "Rosario Fernández",
+        "party": "Un Camino Diferente",
+        "party_logo": "https://votoinformado.jne.gob.pe/LogoOp/2998.jpg",
+        "photo": "https://mpesije.jne.gob.pe/apidocs/ac0b0a59-ead5-4ef1-8ef8-8967e322d6ca.jpg",
+        "color": "#7c2d12",
+    },
+    {
+        "id": "chiabra",
+        "name": "Roberto Chiabra",
+        "party": "Unidad Nacional",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Unidad_Nacional_2025.jpg/120px-Unidad_Nacional_2025.jpg",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Ex_ministro_de_defensa_en_F%C3%B3rum_%28cropped%29.jpg/120px-Ex_ministro_de_defensa_en_F%C3%B3rum_%28cropped%29.jpg",
+        "color": "#1e3a8a",
+    },
+    {
+        "id": "atencio",
+        "name": "Ronald Atencio",
+        "party": "Venceremos",
+        "party_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Logo_Alianza_Electoral_Venceremos.png/120px-Logo_Alianza_Electoral_Venceremos.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Ronald_Atencio.png/120px-Ronald_Atencio.png",
+        "color": "#4d7c0f",
+    },
+]
+
+# Build a lookup dict for fast access by id
+CANDIDATES_BY_ID: dict[str, Candidate] = {c["id"]: c for c in CANDIDATES}
+
+# Valid candidate IDs for validation
+VALID_CANDIDATE_IDS: set[str] = {c["id"] for c in CANDIDATES}
