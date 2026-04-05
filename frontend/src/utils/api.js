@@ -19,7 +19,7 @@ const api = axios.create({
  */
 export async function submitVote(voteData, token) {
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
-  const res = await api.post('/votes/', voteData, { headers });
+  const res = await api.post('/votes', voteData, { headers });
   return res.data
 }
 
@@ -27,7 +27,7 @@ export async function submitVote(voteData, token) {
  * Fetch all aggregated results for the dashboard.
  */
 export async function fetchResults() {
-  const res = await api.get('/results/')
+  const res = await api.get('/results')
   return res.data
 }
 
