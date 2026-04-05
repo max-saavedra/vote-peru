@@ -19,7 +19,7 @@ const api = axios.create({
  */
 export async function submitVote(voteData, token) {
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
-  const res = await api.post('/api/votes', voteData, { headers });
+  const res = await api.post('/votes', voteData, { headers });
   return res.data
 }
 
@@ -27,7 +27,7 @@ export async function submitVote(voteData, token) {
  * Fetch all aggregated results for the dashboard.
  */
 export async function fetchResults() {
-  const res = await api.get('/api/results/')
+  const res = await api.get('/results/')
   return res.data
 }
 
@@ -35,7 +35,7 @@ export async function fetchResults() {
  * Fetch the static candidate list from the backend.
  */
 export async function fetchCandidates() {
-  const res = await api.get('/api/results/candidates')
+  const res = await api.get('/results/candidates')
   return res.data
 }
 
@@ -44,6 +44,6 @@ export async function fetchCandidates() {
  * @param {string} emailHash - SHA-256 hex hash of the email
  */
 export async function checkVoted(emailHash) {
-  const res = await api.get(`/api/votes/check/${emailHash}`)
+  const res = await api.get(`/votes/check/${emailHash}`)
   return res.data.voted
 }
