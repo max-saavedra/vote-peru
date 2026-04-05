@@ -5,6 +5,10 @@
   "installCommand": "npm ci",
   "rewrites": [
     {
+      "source": "/api/votes/(.*)",
+      "destination": "http://34.59.98.198/api/votes/$1"
+    },
+    {
       "source": "/api/:path*",
       "destination": "http://34.59.98.198/api/:path*"
     },
