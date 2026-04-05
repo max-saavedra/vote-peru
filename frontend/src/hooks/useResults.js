@@ -16,10 +16,13 @@ export function useResults() {
 
   const load = useCallback(async () => {
     try {
+      console.log(" [Hook] Iniciando petición a fetchResults()...");
       const results = await fetchResults()
+      console.log(" [Hook] Respuesta cruda del API:", results);
       setData(results)
       setError(null)
     } catch (err) {
+      console.error(" [Hook] Fallo en la petición:", err);
       setError('No se pudo conectar al servidor. Reintentando...')
     } finally {
       setLoading(false)

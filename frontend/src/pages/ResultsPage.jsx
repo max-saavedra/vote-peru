@@ -13,6 +13,18 @@ import './ResultsPage.css'
 export default function ResultsPage() {
   const { data, loading, error, refresh } = useResults()
 
+  // --- LOGS DE DEPURACIÓN ---
+  useEffect(() => {
+    if (data) {
+      console.log(" [Frontend] Datos recibidos del API:", data);
+      console.log(" [Frontend] Total Votos:", data.total_votes);
+    }
+    if (error) {
+      console.error(" [Frontend] Error en el hook useResults:", error);
+    }
+  }, [data, error]);
+  // ---------------------------
+
   if (loading) {
     return (
       <div className="results-page container">
