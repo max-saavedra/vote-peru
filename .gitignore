@@ -26,6 +26,10 @@ node_modules/
 frontend/dist/
 frontend/.vercel/
 
+# Docs
+docs/ubuntu_postgres_setup.md
+docs/DEPLOY.md
+
 # Logs
 *.log
 logs/
