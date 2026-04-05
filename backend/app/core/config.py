@@ -24,7 +24,7 @@ class Settings(BaseSettings):
     ALLOWED_ORIGINS: List[str] = [
         "http://localhost:3000",
         "http://localhost:5173",
-        "https://tendencia-electoral-peru.vercel.app",
+        "https://vote-peru.vercel.app",
         # Add your Vercel/Netlify URL here
     ]
 
