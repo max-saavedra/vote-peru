@@ -2,7 +2,7 @@
  * ResultsPage: full real-time dashboard with all charts.
  * Polls the API every 30 seconds for updated results.
  */
-
+import { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { useResults } from '../hooks/useResults.js'
 import RankingChart from '../components/charts/RankingChart.jsx'
