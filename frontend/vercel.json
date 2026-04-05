@@ -7,10 +7,6 @@
     {
       "source": "/api/:path*",
       "destination": "http://34.59.98.198/api/:path*"
-    },
-    {
-      "source": "/((?!api).*)",
-      "destination": "/index.html"
     }
   ],
   "headers": [
