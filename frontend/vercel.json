@@ -5,6 +5,10 @@
   "installCommand": "npm ci",
   "rewrites": [
     {
+      "source": "/api/:path*",
+      "destination": "http://34.59.98.198/api/:path*"
+    },
+    {
       "source": "/((?!api).*)",
       "destination": "/index.html"
     }
@@ -36,8 +40,5 @@
         }
       ]
     }
-  ],
-  "env": {
-    "VITE_API_URL": "https://34.59.98.198/api"
-  }
+  ]
 }
