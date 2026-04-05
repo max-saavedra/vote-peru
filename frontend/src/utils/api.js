@@ -19,7 +19,7 @@ const api = axios.create({
  */
 export async function submitVote(voteData, token) {
   const headers = token ? { Authorization: `Bearer ${token}` } : {};
-  const res = await api.post('/votes/', voteData, { headers });
+  const res = await api.post('/votes', voteData, { headers });
   return res.data
 }
 
