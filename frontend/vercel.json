@@ -9,10 +9,6 @@
       "destination": "http://34.59.98.198/api/:path*"
     },
     {
-      "source": "/results/:path*",
-      "destination": "http://34.59.98.198/api/results/:path*"
-    },
-    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
