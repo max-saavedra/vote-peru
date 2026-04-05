@@ -100,7 +100,7 @@ export default function VotePage() {
     setSubmitting(true)
     try {
       const token = session?.access_token
-      console.log("🚀 Enviando voto con Token:", token?.substring(0, 20) + "...");
+      //console.log("🚀 Enviando voto con Token:", token?.substring(0, 20) + "...");
       const payload = {
         candidate_id: selectedId,
         age_range: form.age_range || undefined,
@@ -112,16 +112,16 @@ export default function VotePage() {
       }
       //const token = session.access_token
       const res = await submitVote(payload, token)
-      console.log("✅ Respuesta del servidor:", res);
+      //console.log("✅ Respuesta del servidor:", res);
       setResult(res)
       setStep(3)
       window.scrollTo({ top: 0, behavior: 'smooth' })
     } catch (err) {
-      console.error("❌ Error 401/405 detectado:", {
-        status: err.response?.status,
-        data: err.response?.data,
-        headers: err.response?.headers
-      });
+      // console.error("❌ Error 401/405 detectado:", {
+      //   status: err.response?.status,
+      //   data: err.response?.data,
+      //   headers: err.response?.headers
+      // });
       const msg = err.response?.data?.detail || 'Error al registrar el voto. Intenta de nuevo.'
       setResult({ success: false, message: msg })
       setStep(3)
