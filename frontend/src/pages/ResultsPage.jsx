@@ -47,7 +47,7 @@ export default function ResultsPage() {
         </div>
         <div className="results-meta">
           <div className="total-votes">
-            <span className="total-number">{data.total_votes.toLocaleString('es-PE')}</span>
+            <span className="total-number">{(data?.total_votes || 0).toLocaleString('es-PE')}</span>
             <span className="total-label">registros totales</span>
           </div>
           <button className="btn btn-secondary btn-sm" onClick={refresh}>
@@ -67,7 +67,7 @@ export default function ResultsPage() {
       </div>
 
       {/* No votes yet */}
-      {data.total_votes === 0 && (
+      {(data?.total_votes === 0 || !data) && (
         <div className="no-votes card">
           <p>Aún no hay votos registrados. ¡Sé el primero en participar!</p>
           <Link to="/votar" className="btn btn-primary" style={{ marginTop: '1rem' }}>
@@ -76,7 +76,7 @@ export default function ResultsPage() {
         </div>
       )}
 
-      {data.total_votes > 0 && (
+      {data?.total_votes > 0 && (
         <>
           {/* Main ranking */}
           <section className="chart-section">
