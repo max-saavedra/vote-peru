@@ -27,7 +27,7 @@ export async function submitVote(voteData, token) {
  * Fetch all aggregated results for the dashboard.
  */
 export async function fetchResults() {
-  const res = await api.get('/results/')
+  const res = await api.get('/api/results/')
   return res.data
 }
 
